@@ -31,7 +31,7 @@ resource "aws_instance" "instance_jenkins_server_jausseran" {
   }
 }
 
-resource "aws_security_group" "security_group_jausseran" {
+resource "aws_security_group" "security_group_ssh_jausseran" {
   name		  = var.security_group_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
@@ -54,7 +54,7 @@ resource "aws_security_group" "security_group_jausseran" {
     Name = var.security_group_name
   }
 }
-resource "aws_security_group" "security_group_jausseran" {
+resource "aws_security_group" "security_group_jenkins_jausseran" {
   name		  = var.security_group_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
@@ -77,7 +77,7 @@ resource "aws_security_group" "security_group_jausseran" {
     Name = var.security_group_name
   }
 }
-resource "aws_security_group" "security_group_jausseran" {
+resource "aws_security_group" "security_group_web_jausseran" {
   name		  = var.security_group_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
