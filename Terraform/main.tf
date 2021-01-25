@@ -19,10 +19,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-  resource "aws_key_pair" "my_key_pair" {
-  key_name   = var.key_name
-  private_key = var.key_pair
-}
 
 resource "aws_instance" "instance_jenkins_server_jausseran" {
   count         = var.create_instance ? var.instance_number : 1
