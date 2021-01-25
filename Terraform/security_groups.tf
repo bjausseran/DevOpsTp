@@ -1,5 +1,5 @@
 
-resource "aws_security_group" "security_group_jenkins" {
+resource "aws_security_group" "default" {
   name		  = var.security_group_name
   description = "jenkins secutrity groups"
   vpc_id      = aws_vpc.main.id
