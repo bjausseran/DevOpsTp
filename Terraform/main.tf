@@ -17,12 +17,16 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
+resource "aws_key_pair" "my_key_pair" {
+  key_name   = var.key_name
+  public_key = var.key_pair
+}
 
 resource "aws_instance" "instance_jenkins_server_jausseran" {
   count         = var.create_instance ? var.instance_number : 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  key_name      = var.key_pair
+  key_name      = var.key_name
 
   tags = {
     Name = var.instance_name

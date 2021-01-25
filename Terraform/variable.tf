@@ -50,6 +50,13 @@ variable "security_groups_name" {
   default = "security_groups_jausseran"
 }
 
+variable "key_name" {
+  type = string
+  description = "Private Key to pair"
+  default = "tp_dev_ynov"
+}
+
+
 variable "key_pair" {
   type = string
   description = "Private Key to pair"
