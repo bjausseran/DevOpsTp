@@ -47,7 +47,7 @@ variable "create_instance" {
 variable "security_group_name" {
   type = string
   description = "Security group use for Jenkins"
-  default = "security_group_jenkins"
+  default = "security_group_benoit"
 }
 
 variable "key_pair" {
