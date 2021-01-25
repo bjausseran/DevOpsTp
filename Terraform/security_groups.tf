@@ -1,20 +1,23 @@
 
-resource "aws_security_group" "security_group_jausseran" {
+resource "aws_security_group" "security_groups_jausseran" {
   name		  = var.security_group_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
 
   ingress {
+    description = "SSH"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
   }
   ingress {
+    description = "web"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
   }
   ingress {
+    description = "jenkins"
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"

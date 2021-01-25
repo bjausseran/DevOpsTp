@@ -1,9 +1,6 @@
 provider "aws" {
   region     = var.region
 }
-data "aws_vpc" "vpc" {
-    id = var.vpc_id
-}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -21,10 +18,11 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "web" {
-  count         = var.create_instance ? var.instance_number : 0
+resource "aws_instance" "instance_jenkins_server_jausseran" {
+  count         = var.create_instance ? var.instance_number : 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
+  key_name      = "tp_dev_ynov"
 
   tags = {
     Name = var.instance_name
