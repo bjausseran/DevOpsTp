@@ -1,6 +1,6 @@
 
 resource "aws_security_group" "security_groups_jausseran" {
-  name		  = var.security_group_name
+  name		  = var.security_groups_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
 
@@ -31,6 +31,6 @@ resource "aws_security_group" "security_groups_jausseran" {
   }
 
   tags = {
-    Name = var.security_group_name
+    Name = var.security_groups_name
   }
 }

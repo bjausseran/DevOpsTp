@@ -22,7 +22,7 @@ resource "aws_instance" "instance_jenkins_server_jausseran" {
   count         = var.create_instance ? var.instance_number : 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  key_name      = "tp_dev_ynov"
+  key_name      = var.key_pair
 
   tags = {
     Name = var.instance_name
