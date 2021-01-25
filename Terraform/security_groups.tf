@@ -1,7 +1,7 @@
 
-resource "aws_security_group" "default" {
+resource "aws_security_group" "security_group_jausseran" {
   name		  = var.security_group_name
-  description = "jenkins secutrity groups"
+  description = "jenkins security groups"
   vpc_id      = var.vpc_id
 
   ingress {
