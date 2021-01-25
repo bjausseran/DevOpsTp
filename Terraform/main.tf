@@ -32,7 +32,7 @@ resource "aws_instance" "instance_jenkins_server_jausseran" {
   }
 }
 
-resource "aws_security_group" "security_groups_jausseran" {
+resource "aws_security_group" "security_group_jausseran" {
   name		  = var.security_groups_name
   description = "jenkins security groups"
   vpc_id      = var.vpc_id
