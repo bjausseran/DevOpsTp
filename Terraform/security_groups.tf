@@ -2,7 +2,7 @@
 resource "aws_security_group" "default" {
   name		  = var.security_group_name
   description = "jenkins secutrity groups"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22

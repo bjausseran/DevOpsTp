@@ -15,6 +15,11 @@ variable "instance_name" {
   description = "Instance name"
   default = "instance_jenkins_master"
 }
+variable "vpc_id" {
+  type = string
+  description = "vpc id"
+  default = "vpc-891839e0"
+}
 
 variable "region" {
   type = string

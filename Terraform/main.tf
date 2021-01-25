@@ -2,7 +2,7 @@ provider "aws" {
   region     = var.region
 }
 data "aws_vpc" "vpc" {
-    id = "vpc-891839e0"
+    id = var.vpc_id
 }
 
 data "aws_ami" "ubuntu" {
