@@ -32,3 +32,8 @@
           - containerd.io
     - name: Add ubuntu user to docker group
       shell: usermod -aG docker ubuntu
+    - name: Clone cours_ynov repo
+      git:
+        clone: yes
+        dest: cours_ynov
+        repo: 'https://github.com/j0h3/cours_ynov.git'
