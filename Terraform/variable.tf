@@ -47,17 +47,19 @@ variable "create_instance" {
 variable "security_group_ssh_name" {
   type = string
   description = "Security group use for Jenkins"
-  default = "security_group_ssh_jausseran"
+  default = "security_group_jenkins_ssh_jausseran"
 }
+
 variable "security_group_jenkins_name" {
   type = string
   description = "Security group use for Jenkins"
   default = "security_group_jenkins_jausseran"
 }
+
 variable "security_group_web_name" {
   type = string
   description = "Security group use for Jenkins"
-  default = "security_group_web_jausseran"
+  default = "security_group_jenkins_web_jausseran"
 }
 
 variable "key_name" {
